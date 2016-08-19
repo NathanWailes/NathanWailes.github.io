@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/coffee-script/1.6.3/coffee-script.min.js'></script>
+    <!-- Include es5-shim if you are targeting older IEs -->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.1.0/es5-shim.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/reactive-coffee/1.2.4/reactive-coffee.min.js'></script>
+    <script type="text/coffeescript">
+      bind = rx.bind
+      rx.rxt.importTags()
+      _.mixin(_.str.exports())
+
+      $('body').append(
+          div {class: 'main-content'}, [
+            h1 'Hello world!'
+            ul {class: 'nav'}, [
+              li 'Home'
+              li 'About'
+              li 'Contact'
+            ]
+            input {type: 'text', placeholder: 'Your name here'}
+          ]
+        )
+    </script>
+  </body>
+</html>
